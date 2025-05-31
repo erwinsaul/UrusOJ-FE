@@ -1,0 +1,135 @@
+export const m = {
+  // SideMenu.vue
+  Dashboard: 'Panel de Control',
+  General: 'General',
+  User: 'Usuario',
+  Announcement: 'Anuncio',
+  System_Config: 'Configuración del Sistema',
+  Judge_Server: 'Servidor de Juez',
+  Prune_Test_Case: 'Limpiar Casos de Prueba',
+  Problem: 'Problema',
+  FromFile: 'Desde Archivo',
+  ToFile: 'Hacia Archivo',
+  ShareSubmission: 'Compartir Envío',
+  Problem_List: 'Lista de Problemas',
+  Create_Problem: 'Crear Problema',
+  Export_Import_Problem: 'Exportar o Importar Problema',
+  Contest: 'Concurso',
+  Contest_List: 'Lista de Concursos',
+  Create_Contest: 'Crear Concurso',
+  
+  // User.vue
+  User_User: 'Usuario',
+  Import_User: 'Importar Usuario',
+  Generate_User: 'Generar Usuario',
+  
+  // User.vue-dialog
+  User_Info: 'Información del Usuario',
+  User_Username: 'Nombre de Usuario',
+  User_Real_Name: 'Nombre Real',
+  User_Email: 'Email',
+  User_New_Password: 'Nueva Contraseña',
+  User_Type: 'Tipo de Usuario',
+  Problem_Permission: 'Permisos de Problemas',
+  Two_Factor_Auth: 'Autenticación de Dos Factores',
+  Is_Disabled: 'Está Deshabilitado',
+  
+  // Announcement.vue
+  General_Announcement: 'Anuncio General',
+  Announcement_Title: 'Título del Anuncio',
+  Announcement_Content: 'Contenido del Anuncio',
+  Announcement_visible: 'Visible',
+  
+  // Conf.vue
+  SMTP_Config: 'Configuración SMTP',
+  Server: 'Servidor',
+  Port: 'Puerto',
+  Email: 'Email',
+  Password: 'Contraseña',
+  Website_Config: 'Configuración del Sitio Web',
+  Base_Url: 'URL Base',
+  Name: 'Nombre',
+  Shortcut: 'Acceso Directo',
+  Footer: 'Pie de Página',
+  Allow_Register: 'Permitir Registro',
+  Submission_List_Show_All: 'Lista de Envíos Mostrar Todos',
+  
+  // JudgeServer.vue
+  Judge_Server_Token: 'Token del Servidor de Juez',
+  Judge_Server_Info: 'Información del Servidor de Juez',
+  IP: 'IP',
+  Judger_Version: 'Versión del Evaluador',
+  Service_URL: 'URL del Servicio',
+  Last_Heartbeat: 'Último Latido',
+  Create_Time: 'Fecha de Creación',
+  
+  // PruneTestCase
+  Test_Case_Prune_Test_Case: 'Limpiar Casos de Prueba',
+  
+  // Problem.vue
+  Display_ID: 'ID de Visualización',
+  Title: 'Título',
+  Description: 'Descripción',
+  Input_Description: 'Descripción de Entrada',
+  Output_Description: 'Descripción de Salida',
+  Time_Limit: 'Límite de Tiempo',
+  Memory_limit: 'Límite de Memoria',
+  Difficulty: 'Dificultad',
+  Visible: 'Visible',
+  Languages: 'Lenguajes',
+  Input_Samples: 'Ejemplos de Entrada',
+  Output_Samples: 'Ejemplos de Salida',
+  Add_Sample: 'Agregar Ejemplo',
+  Code_Template: 'Plantilla de Código',
+  Special_Judge: 'Juez Especial',
+  Use_Special_Judge: 'Usar Juez Especial',
+  Special_Judge_Code: 'Código del Juez Especial',
+  SPJ_language: 'Lenguaje SPJ',
+  Compile: 'Compilar',
+  TestCase: 'Caso de Prueba',
+  IOMode: 'Modo de E/S',
+  InputFileName: 'Nombre del Archivo de Entrada',
+  OutputFileName: 'Nombre del Archivo de Salida',
+  Type: 'Tipo',
+  Input: 'Entrada',
+  Output: 'Salida',
+  Score: 'Puntuación',
+  Hint: 'Pista',
+  Source: 'Fuente',
+  Edit_Problem: 'Editar Problema',
+  Add_Problme: 'Agregar Problema',
+  High: 'Alto',
+  Mid: 'Medio',
+  Low: 'Bajo',
+  Tag: 'Etiqueta',
+  New_Tag: 'Nueva Etiqueta',
+  
+  // ProblemList.vue
+  Contest_Problem_List: 'Lista de Problemas del Concurso',
+  
+  // Contest.vue
+  ContestTitle: 'Título del Concurso',
+  ContestDescription: 'Descripción del Concurso',
+  Contest_Start_Time: 'Hora de Inicio del Concurso',
+  Contest_End_Time: 'Hora de Fin del Concurso',
+  Contest_Password: 'Contraseña del Concurso',
+  Contest_Rule_Type: 'Tipo de Regla del Concurso',
+  Real_Time_Rank: 'Ranking en Tiempo Real',
+  Contest_Status: 'Estado del Concurso',
+  Allowed_IP_Ranges: 'Rangos de IP Permitidos',
+  CIDR_Network: 'Red CIDR',
+  
+  // Dashboard.vue
+  Last_Login: 'Último Acceso',
+  System_Overview: 'Resumen del Sistema',
+  DashBoardJudge_Server: 'Servidor de Juez del Panel',
+  HTTPS_Status: 'Estado HTTPS',
+  Force_HTTPS: 'Forzar HTTPS',
+  CDN_HOST: 'HOST CDN',
+  
+  // Login.vue
+  Welcome_to_Login: 'Bienvenido al Ingreso',
+  GO: 'IR',
+  username: 'nombre de usuario',
+  password: 'contraseña'
+}
