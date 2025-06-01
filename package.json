@@ -1,8 +1,8 @@
 {
-  "name": "onlinejudge",
-  "version": "2.7.6",
-  "description": "onlinejudge front end",
-  "author": "zemal <rawidn@163.com>",
+  "name": "UrusOJ",
+  "version": "1.0.0",
+  "description": "Juez Virtual SISINF front end",
+  "author": "erwinsaul <erwinsaul.sc@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
