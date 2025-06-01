@@ -1,4 +1,4 @@
-# OnlineJudge Front End
+# OnlineJudge Frontend
 [![vue](https://img.shields.io/badge/vue-2.5.13-blue.svg?style=flat-square)](https://github.com/vuejs/vue)
 [![vuex](https://img.shields.io/badge/vuex-3.0.1-blue.svg?style=flat-square)](https://vuex.vuejs.org/)
 [![echarts](https://img.shields.io/badge/echarts-3.8.3-blue.svg?style=flat-square)](https://github.com/ecomfe/echarts)
@@ -6,59 +6,55 @@
 [![element-ui](https://img.shields.io/badge/element-2.0.9-blue.svg?style=flat-square)](https://github.com/ElemeFE/element)
 [![Build Status](https://travis-ci.org/QingdaoU/OnlineJudgeFE.svg?branch=master)](https://travis-ci.org/QingdaoU/OnlineJudgeFE)
 
->### A multiple pages app built for OnlineJudge. [Demo](https://qduoj.com)
 
-## Features
+## Características
 
-+ Webpack3 multiple pages with bundle size optimization
-+ Easy use simditor & Nice codemirror editor
-+ Amazing charting and visualization(echarts)
-+ User-friendly operation
-+ Quite beautiful：)
++ Webpack3 con múltiples páginas y optimización del tamaño de bundle
++ Editor simditor fácil de usar y excelente editor de código codemirror
++ Gráficos y visualización increíbles (echarts)
++ Operación amigable para el usuario
++ Bastante hermoso :)
 
-## Get Started
+## Primeros Pasos
 
-Install nodejs **v8.12.0** first.
+Instala nodejs **v8.12.0** primero.
 
 ### Linux
 
 ```bash
 npm install
-# we use webpack DllReference to decrease the build time,
-# this command only needs execute once unless you upgrade the package in build/webpack.dll.conf.js
+# utilizamos webpack DllReference para disminuir el tiempo de construcción,
+# este comando solo necesita ejecutarse una vez a menos que actualices el paquete en build/webpack.dll.conf.js
 export NODE_ENV=development 
 npm run build:dll
 
-# the dev-server will set proxy table to your backend
-export TARGET=http://Your-backend
+# el servidor de desarrollo configurará la tabla proxy hacia tu backend
+export TARGET=http://Tu-backend
 
-# serve with hot reload at localhost:8080
+# servir con recarga en caliente en localhost:8080
 npm run dev
 ```
+
 ### Windows
 
 ```bash
 npm install
-# we use webpack DllReference to decrease the build time,
-# this command only needs execute once unless you upgrade the package in build/webpack.dll.conf.js
+# utilizamos webpack DllReference para disminuir el tiempo de construcción,
+# este comando solo necesita ejecutarse una vez a menos que actualices el paquete en build/webpack.dll.conf.js
 set NODE_ENV=development 
 npm run build:dll
 
-# the dev-server will set proxy table to your backend
-set TARGET=http://Your-backend
+# el servidor de desarrollo configurará la tabla proxy hacia tu backend
+set TARGET=http://Tu-backend
 
-# serve with hot reload at localhost:8080
+# servir con recarga en caliente en localhost:8080
 npm run dev
 ```
 
-## Screenshots
+## Compatibilidad de Navegadores
 
-[Check here.](https://github.com/QingdaoU/OnlineJudge)
+Navegadores modernos e Internet Explorer 10+.
 
-## Browser Support
-
-Modern browsers and Internet Explorer 10+.
-
-## LICENSE
+## LICENCIA
 
 [MIT](http://opensource.org/licenses/MIT)
