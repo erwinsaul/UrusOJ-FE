@@ -51,7 +51,12 @@ const rootActions = {
     commit(types.CHANGE_MODAL_STATUS, payload)
   },
   changeDomTitle ({commit, state}, payload) {
-    if (payload && payload.title) {
+    
+    if (state.website.website_name_shortcut==undefined){
+        state.website.website_name_shortcut = "UrusOj";
+    }
+
+    if (payload && payload.title) {      
       window.document.title = state.website.website_name_shortcut + ' | ' + payload.title
     } else {
       window.document.title = state.website.website_name_shortcut + ' | ' + state.route.meta.title

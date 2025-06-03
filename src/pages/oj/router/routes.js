@@ -20,95 +20,103 @@ import {
 import * as Contest from '@oj/views/contest'
 import * as Setting from '@oj/views/setting'
 
+import { generateTitle } from '@oj/utils/site-config'
+
 export default [
   {
     name: 'home',
     path: '/',
-    meta: {title: 'Home'},
+    meta: {title: 'Inicio'},  
     component: Home
   },
   {
     name: 'logout',
     path: '/logout',
-    meta: {title: 'Logout'},
+    meta: {title: 'Cerrar Sesión'},  // ← Cambiar
     component: Logout
   },
   {
     name: 'apply-reset-password',
     path: '/apply-reset-password',
-    meta: {title: 'Apply Reset Password'},
+    meta: {title: 'Solicitar Nueva Contraseña'},  // ← Cambiar
     component: ApplyResetPassword
   },
   {
     name: 'reset-password',
     path: '/reset-password/:token',
-    meta: {title: 'Reset Password'},
+    meta: {title: 'Restablecer Contraseña'},  // ← Cambiar
     component: ResetPassword
   },
   {
     name: 'problem-list',
     path: '/problem',
-    meta: {title: 'Problem List'},
+    meta: {title: 'Lista de Problemas'},  // ← Cambiar
     component: ProblemList
   },
   {
     name: 'problem-details',
     path: '/problem/:problemID',
-    meta: {title: 'Problem Details'},
+    meta: {title: 'Detalle del Problema'},  // ← Cambiar
     component: Problem
   },
   {
     name: 'submission-list',
     path: '/status',
-    meta: {title: 'Submission List'},
+    meta: {title: 'Lista de Envíos'},  // ← Cambiar
     component: SubmissionList
   },
   {
     name: 'submission-details',
     path: '/status/:id/',
-    meta: {title: 'Submission Details'},
+    meta: {title: 'Detalle de Envío'},  // ← Cambiar
     component: SubmissionDetails
   },
   {
     name: 'contest-list',
     path: '/contest',
-    meta: {title: 'Contest List'},
+    meta: {title: 'Lista de Concursos'},  // ← Cambiar
     component: Contest.ContestList
   },
   {
     name: 'contest-details',
     path: '/contest/:contestID/',
     component: Contest.ContestDetails,
-    meta: {title: 'Contest Details'},
+    meta: {title: 'Detalle del Concurso'},  // ← Cambiar
     children: [
       {
         name: 'contest-submission-list',
         path: 'submissions',
+        meta: {title: 'Envíos del Concurso'},  // ← AGREGAR
         component: SubmissionList
       },
       {
         name: 'contest-problem-list',
         path: 'problems',
+        meta: {title: 'Problemas del Concurso'},  // ← AGREGAR
         component: Contest.ContestProblemList
       },
       {
         name: 'contest-problem-details',
         path: 'problem/:problemID/',
+        meta: {title: 'Problema del Concurso'},  // ← AGREGAR
         component: Problem
       },
       {
         name: 'contest-announcement-list',
         path: 'announcements',
+        meta: {title: 'Anuncios del Concurso'},  // ← AGREGAR
         component: Announcements
       },
       {
         name: 'contest-rank',
         path: 'rank',
+        meta: {title: 'Ranking del Concurso'},  // ← AGREGAR
         component: Contest.ContestRank
       },
       {
         name: 'acm-helper',
         path: 'helper',
+        meta: {title: 'Ayudante ACM'},  // ← AGREGAR
         component: Contest.ACMContestHelper
       }
     ]
@@ -116,47 +124,48 @@ export default [
   {
     name: 'acm-rank',
     path: '/acm-rank',
-    meta: {title: 'ACM Rankings'},
+    meta: {title: 'Ranking'},  // ← Cambiar
     component: ACMRank
   },
   {
     name: 'oi-rank',
     path: '/oi-rank',
-    meta: {title: 'OI Rankings'},
+    meta: {title: 'Rankings OI'},  // ← Cambiar
     component: OIRank
   },
   {
     name: 'user-home',
     path: '/user-home',
     component: UserHome,
-    meta: {requiresAuth: true, title: 'User Home'}
+    meta: {requiresAuth: true, title: 'Mi Perfil'}  // ← Cambiar
   },
   {
     path: '/setting',
     component: Setting.Settings,
+    meta: {title: 'Configuraciones'},  // ← AGREGAR
     children: [
       {
         name: 'default-setting',
         path: '',
-        meta: {requiresAuth: true, title: 'Default Settings'},
+        meta: {requiresAuth: true, title: 'Configuraciones'},  // ← Cambiar
         component: Setting.ProfileSetting
       },
       {
         name: 'profile-setting',
         path: 'profile',
-        meta: {requiresAuth: true, title: 'Profile Settings'},
+        meta: {requiresAuth: true, title: 'Configurar Perfil'},  // ← Cambiar
         component: Setting.ProfileSetting
       },
       {
         name: 'account-setting',
         path: 'account',
-        meta: {requiresAuth: true, title: 'Account Settings'},
+        meta: {requiresAuth: true, title: 'Configurar Cuenta'},  // ← Cambiar
         component: Setting.AccountSetting
       },
       {
         name: 'security-setting',
         path: 'security',
-        meta: {requiresAuth: true, title: 'Security Settings'},
+        meta: {requiresAuth: true, title: 'Configurar Seguridad'},  // ← Cambiar
         component: Setting.SecuritySetting
       }
     ]
@@ -164,18 +173,18 @@ export default [
   {
     path: '/about',
     name: 'about',
-    meta: {title: 'About'},
+    meta: {title: 'Acerca de'},  // ← Cambiar
     component: About
   },
   {
     path: '/faq',
     name: 'faq',
-    meta: {title: 'FAQ'},
+    meta: {title: 'Preguntas Frecuentes'},  // ← Cambiar
     component: FAQ
   },
   {
     path: '*',
-    meta: {title: '404'},
+    meta: {title: 'Página no encontrada'},  // ← Cambiar
     component: NotFound
   }
 ]
