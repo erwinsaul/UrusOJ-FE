@@ -333,9 +333,25 @@
   }
 
   .flex-container {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    min-height: auto !important;
+    height: auto !important;
+    position: relative;
+    top: 0;
+    
     #main {
       flex: auto;
       margin-right: 18px;
+      margin-top: 0;
+      padding-top: 0;
+      position: relative;
+      top: 0;
+      
       .filter {
         margin-right: -10px;
       }
@@ -344,5 +360,17 @@
       flex: none;
       width: 210px;
     }
+  }
+
+  // Sobrescribir estilos del Panel que puedan estar causando centrado
+  /deep/ .ivu-card {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /deep/ .ivu-card-body {
+    padding-top: 16px !important;
   }
 </style>
