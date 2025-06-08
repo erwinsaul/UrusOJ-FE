@@ -361,8 +361,7 @@
       width: 210px;
     }
   }
-
-  // Sobrescribir estilos del Panel que puedan estar causando centrado
+salir mo
   /deep/ .ivu-card {
     margin-top: 0 !important;
     padding-top: 0 !important;
