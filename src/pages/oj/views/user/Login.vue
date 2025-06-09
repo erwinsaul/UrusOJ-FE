@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="login-header">
+      <h2>Ingresar</h2>
+    </div>
+    
     <Form ref="formLogin" :model="formLogin" :rules="ruleLogin">
       <FormItem prop="username">
         <Input type="text" v-model="formLogin.username" :placeholder="$t('m.LoginUsername')" size="large" @on-enter="handleLogin">
@@ -17,16 +21,20 @@
         </Input>
       </FormItem>
     </Form>
+    
     <div class="footer">
       <Button
         type="primary"
         @click="handleLogin"
-        class="btn" long
+        class="btn" 
+        long
         :loading="btnLoginLoading">
         {{$t('m.UserLogin')}}
       </Button>
-      <a v-if="website.allow_register" @click.stop="handleBtnClick('register')">{{$t('m.No_Account')}}</a>
-      <a @click.stop="goResetPassword" style="float: right">{{$t('m.Forget_Password')}}</a>
+      <div class="forgot-password">
+        <a v-if="website.allow_register" @click.stop="handleBtnClick('register')">{{$t('m.No_Account')}}</a>
+        <a @click.stop="goResetPassword">{{$t('m.Forget_Password')}}</a>
+      </div>
     </div>
   </div>
 </template>
@@ -112,16 +120,83 @@
 </script>
 
 <style scoped lang="less">
+  .login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  
+  /deep/ .ivu-input {
+    border-radius: 4px;
+    border: 1px solid #dcdee2;
+    
+    &:focus {
+      border-color: #2d8cf0;
+      box-shadow: 0 0 0 2px rgba(45, 140, 240, 0.2);
+    }
+  }
+
   .footer {
-    overflow: auto;
-    margin-top: 20px;
+    text-align: center !important;
+    margin-top: 30px;
     margin-bottom: -15px;
-    text-align: left;
-    .btn {
-      margin: 0 0 15px 0;
-      &:last-child {
-        margin: 0;
+    background: white !important;
+    
+    /* Forzar estilos del botón - mantener azul */
+    /deep/ .ivu-btn {
+      width: 100% !important;
+      height: 40px !important;
+      font-size: 16px !important;
+      border-radius: 4px !important;
+      margin-bottom: 20px !important;
+      background-color: #2d8cf0 !important;
+      border-color: #2d8cf0 !important;
+      color: white !important;
+      
+      &:hover {
+        background-color: #2b85e4 !important;
+        border-color: #2b85e4 !important;
       }
     }
+    
+    .forgot-password {
+      text-align: center !important;
+      display: block !important;
+      width: 100% !important;
+      background: white !important;
+      
+      a {
+        color: #2d8cf0 !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        display: block !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+        background: white !important;
+        
+        &:hover {
+          text-decoration: underline !important;
+          background: white !important;
+        }
+      }
+    }
+  }
+
+  /* Espaciado coherente con recuperar contraseña */
+  /deep/ .ivu-form-item {
+    margin-bottom: 20px;
+  }
+
+  .ivu-form-item {
+    transition: all 0.3s ease;
   }
 </style>
